@@ -131,6 +131,6 @@ def test_delete_team(session: Session, client: TestClient):
 
     team_in_db = session.get(Team, team_1.id)
 
-    assert response.status_code == 404
+    assert response.status_code == 200
     assert team_in_db is None
 
